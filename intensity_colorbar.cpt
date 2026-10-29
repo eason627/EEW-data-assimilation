@@ -1,0 +1,14 @@
+# Custom PGA color scale
+# PGA color scale
+0     white  1    white
+1   darkseagreen2  2       darkseagreen2
+2     darkseagreen3  3     darkseagreen3
+3    yellow2         4    yellow2
+4    gold         5     gold
+5   orange           6     orange
+6  red2           7    red2
+7   red3          8     red3
+8  red4        9    red4
+9   purple         10    purple
+
+
