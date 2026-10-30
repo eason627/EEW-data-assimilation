@@ -10,10 +10,10 @@ Times and magnitudes retain the source event index values.
 | ID | Source event time | Label |
 | --- | --- | --- |
 | 1 | 20240402T2358 | Hualien |
-| 2 | 20260728T1627 | Kumamoto |
-| 3 | 20160205T1957 | Meinong |
-| 4 | 20220918T0644 | Chishang |
-| 5 | 20160416T0125 | Kumamoto |
+| 2 | 20160205T1957 | Meinong |
+| 3 | 20220918T0644 | Chihshang |
+| 4 | 20260728T1627 | 2026 Kumamoto |
+| 5 | 20160416T0125 | 2016 Kumamoto |
 
 ## Files
 
@@ -35,7 +35,7 @@ jupyter lab
 
 Open `seismic_data_preprocess/Run_KalmanFilter.ipynb`, set `EVENT_ID` (1–5),
 and run all cells. The notebook works from the release root or notebook directory.
-Only one event is processed per run. `END_SECOND` controls the last update time.
+Only one event is processed per run. `HISTORY_END_SECOND` controls the end of the full time series. `EVALUATION_SECOND` sets each event's manuscript evaluation time (Hualien 35 s; Meinong 25 s; Chihshang 25 s; 2026 Kumamoto 27 s; 2016 Kumamoto 25 s).
 `coefficient_history` and `pga_history` contain the per-update outputs in memory.
 GMPE prediction and final PGA distribution use the original PyGMT map style
 (surface interpolation, coastlines, PGA colors and station markers). Least-square
@@ -49,8 +49,8 @@ RealPGA, EndRealPGA, Station and Vs30. PGA is in gal and Vs30 in m/s.
 ## Reproducibility and attribution
 
 The notebook retains the source five-event calculation settings, including
-the event-2 station exclusion and region-specific zero-PGA handling and covariance
-updates. The initial least-square fit uses GMPE predictions, not final observed
+region-specific zero-PGA handling and covariance updates. KMMH07 is retained; the
+2026 Kumamoto dataset contains 249 stations. The initial least-square fit uses GMPE predictions, not final observed
 PGA. Auxiliary figure experiments, batch comparisons, magnitude-report schedules
 and directional/residual diagnostics have been removed.
 
@@ -58,8 +58,7 @@ All five events were executed through all four notebook steps in the existing
 `xdas310` environment. Four figures per event were produced. After restoring PyGMT, the Taiwan and
 Japan GMPE/final-PGA maps were rendered and visually checked. Per-update KF
 residual medians and standard deviations matched the original core workflows
-with maximum absolute difference 3.2e-15. The environment specification has
-not yet been tested by creating a fresh environment.
+with maximum absolute difference 3.2e-15. The environment specification has not yet been tested by creating a fresh environment.
 
 Paper title, authors, DOI, code license and third-party data attribution/terms
 remain to be supplied by the author. No license is assigned by this preparation copy.
