@@ -28,9 +28,9 @@ KMMH07 is included in the 2026 Kumamoto dataset.
 - `seismic_data_preprocess/Run_KalmanFilter.ipynb`: main workflow for one
   selected event: GMPE prediction, observed final PGA distribution,
   least-square initialization and KF updates. Stored outputs are for event 1.
-- `analysis/point_line_benchmark.py`: point- and line-source Chao20
-  benchmarks and 25-gal accuracy, missed- and false-alert rates for events 1–3.
-- `analysis/lead_time.py`: warning lead times for the 2024 Hualien earthquake.
+- `seismic_data_preprocess/Run_PointLine_Benchmark.ipynb`: point- and
+  line-source Chao20 benchmarks compared with the KF for one selected Taiwan
+  event (1–3). Stored outputs are for event 1.
 - `RuptureParaTime_new/`: processed station-by-time PGA tables for the five events.
 - `earthquake_index.csv`: event IDs, event times, hypocenters and Mw.
 - `GMPE code/`: Chao et al. (2020) implementation and coefficients
@@ -52,15 +52,16 @@ conda activate eew-data-assimilation
 
 ## Usage
 
-### Main workflow
-
 ```bash
 jupyter lab
 ```
 
-Open `seismic_data_preprocess/Run_KalmanFilter.ipynb`, set `EVENT_ID` (1–5)
-and run all cells. The notebook can be started from the repository root or
-from its own directory, and processes one event per run.
+Both notebooks can be started from the repository root or from their own
+directory, and process one event per run: set `EVENT_ID` and run all cells.
+
+### Kalman-filter workflow
+
+Open `seismic_data_preprocess/Run_KalmanFilter.ipynb` and set `EVENT_ID` (1–5).
 
 - `EVALUATION_SECOND` sets the evaluation time of each event (Hualien 35 s,
   Meinong 25 s, Chihshang 25 s, 2026 Kumamoto 27 s, 2016 Kumamoto 25 s).
@@ -79,22 +80,25 @@ approximation), and converted from g to gal with `980 × 1.22`; Zhao06 returns
 gal and is scaled by `1.2`. Taiwan events use the covariance update of
 manuscript Eq. 9, `(I − KH)P`, and Japan events use the equivalent Joseph form.
 
-### Additional analyses
+### Point- and line-source benchmarks
 
-```bash
-python analysis/point_line_benchmark.py [output_dir]
-python analysis/lead_time.py [output_dir]
-```
+Open `seismic_data_preprocess/Run_PointLine_Benchmark.ipynb` and set
+`EVENT_ID` (1–3).
 
-Both scripts write figures and CSV tables to `output_dir` (default
-`analysis/output/`) and print the summary values.
-
-- Benchmarks use the AutoBATS Mw (Hualien 7.3, Meinong 6.4, Chihshang 7.0)
-  and the final CWA hypocenter. The line source starts at the epicenter and
-  runs along strike 21°, 299° and 26°, with Wells & Coppersmith (1994) lengths
-  of 82, 14 and 45 km. Rates are percentages of all stations.
-- The lead time is the time the observed PGA first reaches 25 gal minus the
-  time the KF-predicted PGA first reaches 25 gal.
+- Both benchmarks evaluate Chao20 at the AutoBATS Mw (Hualien 7.3, Meinong
+  6.4, Chihshang 7.0) with the final CWA hypocenter.
+- Point source: hypocentral distance as Rrup and hypocentral depth as Ztor.
+- Line source: a horizontal trace starting at the epicenter along the adopted
+  rupture direction (21°, 299° and 26°), at a constant depth equal to the
+  final hypocentral depth, with no fault dip. Its length follows Wells &
+  Coppersmith (1994) (82, 14 and 45 km). Rrup is the shortest 3-D distance to
+  the trace.
+- The KF prediction at the evaluation time uses the Taiwan settings of
+  `Run_KalmanFilter.ipynb`.
+- The notebook reports μ, σ, ME and the 25-gal accuracy, missed- and
+  false-alert rates (percentages of all stations), and shows a three-panel
+  figure for each method. An optional last cell prints the summary for all
+  three events.
 
 ## Input data format
 
@@ -136,5 +140,5 @@ cover the third-party data listed under Data sources.
 - 2026-10-30: Focal mechanisms in the final-PGA map are now keyed by the event
   IDs above (event 2 previously failed and event 3 showed another event's
   mechanism; map only, no numerical change). Added the initial point-source
-  μ/σ print, the benchmark and lead-time scripts and the license; translated
-  the remaining non-English comments in `vdist.py`.
+  μ/σ print, the point- and line-source benchmark notebook and the license;
+  translated the remaining non-English comments in `vdist.py`.

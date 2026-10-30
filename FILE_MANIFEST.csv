@@ -13,8 +13,7 @@ seismic_data_preprocess/Run_KalmanFilter.ipynb,seismic_data_preprocess/03_Run_Ka
 PGA_colorbar.cpt,PGA_colorbar.cpt,Copied without modification for original map rendering,372,61cbda91c8d847523f987bee611944677c80cc38597f6c0ab7a798c8ea5213e0
 intensity_colorbar.cpt,intensity_colorbar.cpt,Copied without modification for original map rendering,362,b76e6d1a9746cb0fc7731517995b19e978fdf53f63a799bf70292840d03ec92c
 TW_city_boundary.txt,TW_city_boundary.txt,Copied without modification for original map rendering,3902323,8349b88e13769fe5caf56011f3aa6d8d9e65d631e3487ebdc2b4906c7599e9b0
-analysis/point_line_benchmark.py,seismic_data_preprocess/08_point_line_sorce.ipynb; seismic_data_preprocess/Run_KalmanFilter.ipynb,Point/line-source benchmark computation and 25-gal rates ported from source notebook for events 1-3; KF block identical to release notebook Taiwan branch,11832,aefad30bb2119d9fcd60e8207234bb6607146b6b33e611e1ab8f570bcd4ae489
-analysis/lead_time.py,seismic_data_preprocess/07_leadtime_assessment.ipynb,Lead-time KF and first-exceedance calculation ported from source notebook; additional northern lead times retained as in source,8101,1ade0b3c95e0ad712ad21124522564676234cd997db04e8dd9d777acc6c0e4cd
 environment.yml,,Versions pinned to a tested environment,393,274d5522377e6e1ea7002dde87f09c85558d496a51a87051bd16638b0e6208d2
 LICENSE,,Added MIT license,1090,36b5982e2caa5f23327d87445a401a9bc3d4030a41c84b1575a51fca72be5bec
-README.md,,Rewritten for public release,6060,673e72c0d735170ea478861d8803fbac2bd53c9baeccb8bb586132e01a8abdc4
+README.md,,Rewritten for public release,6384,784e14d11bd8745c7de8b5a3080388a0d77c349a9367fcd114436975ac30b8f9
+seismic_data_preprocess/Run_PointLine_Benchmark.ipynb,seismic_data_preprocess/08_point_line_sorce.ipynb; seismic_data_preprocess/Run_KalmanFilter.ipynb,Event-selectable point/line-source benchmark notebook; line source at constant hypocentral depth (author-requested method change); KF identical to Run_KalmanFilter.ipynb Taiwan branch; stored outputs from EVENT_ID=1,749915,0a3b02d44e56b4d98afa29832f48638d51b64f180e425ec3469d105b6b7c8b6f
