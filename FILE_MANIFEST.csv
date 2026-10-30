@@ -13,7 +13,7 @@ seismic_data_preprocess/Run_KalmanFilter.ipynb,seismic_data_preprocess/03_Run_Ka
 PGA_colorbar.cpt,PGA_colorbar.cpt,Copied without modification for original map rendering,372,61cbda91c8d847523f987bee611944677c80cc38597f6c0ab7a798c8ea5213e0
 intensity_colorbar.cpt,intensity_colorbar.cpt,Copied without modification for original map rendering,362,b76e6d1a9746cb0fc7731517995b19e978fdf53f63a799bf70292840d03ec92c
 TW_city_boundary.txt,TW_city_boundary.txt,Copied without modification for original map rendering,3902323,8349b88e13769fe5caf56011f3aa6d8d9e65d631e3487ebdc2b4906c7599e9b0
-environment.yml,,Versions pinned to a tested environment; fiona added (required by openquake.engine),403,f67adf92cebb8618c94782bb9236640901940f430955ddbe87e7d036b211cd50
+environment.yml,,"Versions pinned to a tested environment; fiona added (required by openquake.engine); h5py, numba, llvmlite and pillow pinned to versions with manylinux2014 wheels",494,c33b3ceb76ca4f39098b099d28e41004f8971aba995abaa612f18f42fd460a6a
 LICENSE,,Added MIT license,1090,36b5982e2caa5f23327d87445a401a9bc3d4030a41c84b1575a51fca72be5bec
 README.md,,Rewritten for public release,6498,6221480c56daeec0612e340807d7b6713f185bc3699fc0ee13cb6568639bcd81
 seismic_data_preprocess/Run_PointLine_Benchmark.ipynb,seismic_data_preprocess/08_point_line_sorce.ipynb; seismic_data_preprocess/Run_KalmanFilter.ipynb,Event-selectable point/line-source benchmark notebook; line source at constant hypocentral depth (author-requested method change); KF identical to Run_KalmanFilter.ipynb Taiwan branch; stored outputs from EVENT_ID=1; PyGMT point/line maps; single-panel comparison figure; Chihshang KF start 11 s,996595,c7693fca862e44cd21d8b4e8136cb25c1b896cf63ffa38cbd3bd4fa87d6acc0c
