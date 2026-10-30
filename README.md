@@ -96,8 +96,8 @@ Open `seismic_data_preprocess/Run_PointLine_Benchmark.ipynb` and set
 - The KF prediction at the evaluation time uses the Taiwan settings of
   `Run_KalmanFilter.ipynb`.
 - The notebook reports μ, σ, ME and the 25-gal accuracy, missed- and
-  false-alert rates (percentages of all stations), and shows a three-panel
-  figure for each method. An optional last cell prints the summary for all
+  false-alert rates (percentages of all stations), and plots predicted vs
+  observed PGA for each method. An optional last cell prints the summary for all
   three events.
 
 ## Input data format
@@ -142,3 +142,5 @@ cover the third-party data listed under Data sources.
   mechanism; map only, no numerical change). Added the initial point-source
   μ/σ print, the point- and line-source benchmark notebook and the license;
   translated the remaining non-English comments in `vdist.py`.
+- 2026-10-30: The 2022 Chihshang KF now starts at 11 s, the time of the first
+  CWA alert (previously 10 s).

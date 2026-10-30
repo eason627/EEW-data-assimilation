@@ -8,6 +8,7 @@ dependencies:
   - gshhg-gmt=2.3.7
   - dcw-gmt=2.2.0
   - ghostscript=10.06.0
+  - fiona
   - jupyterlab=4.5.5
   - ipykernel
   - nbconvert
