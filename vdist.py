@@ -23,7 +23,7 @@ def vdist(lat1, lon1, lat2, lon2):
     lon2 = lon2.ravel()
     
     
-    # 计算简单距离
+    # Simple distance in degrees
     distance = np.sqrt((lat2 - lat1) ** 2 + (lon2 - lon1) ** 2)
     
     
@@ -123,7 +123,7 @@ def vdist(lat1, lon1, lat2, lon2):
             lambdaold[lambda_val > np.pi] = np.pi
             lambda_val[lambda_val > np.pi] = np.pi
             
-        # 检查收敛性
+        # Check convergence
         notdone = np.abs(lambda_val - lambdaold) > 1e-12
 
     u2 = np.cos(alpha) ** 2 * (a ** 2 - b ** 2) / b ** 2

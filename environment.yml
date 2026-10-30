@@ -2,17 +2,20 @@ name: eew-data-assimilation
 channels:
   - conda-forge
 dependencies:
-  - python=3.10
-  - numpy
-  - pandas
-  - scipy
-  - matplotlib
-  - pygmt
-  - gmt
-  - gshhg-gmt
-  - dcw-gmt
-  - jupyterlab
+  - python=3.10.18
+  - gmt=6.6.0
+  - pygmt=0.10.0
+  - gshhg-gmt=2.3.7
+  - dcw-gmt=2.2.0
+  - ghostscript=10.06.0
+  - jupyterlab=4.5.5
   - ipykernel
+  - nbconvert
   - pip
   - pip:
-      - openquake.engine
+      - numpy==2.2.6
+      - pandas==2.3.3
+      - scipy==1.15.3
+      - matplotlib==3.10.9
+      - pyproj==3.7.1
+      - openquake.engine==3.25.1
