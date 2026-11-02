@@ -20,8 +20,7 @@ all stations after each update.
 | 4 | 2026 Kumamoto | 20260728T1627 | 6.8 | 249 | Zhao06 |
 | 5 | 2016 Kumamoto | 20160416T0125 | 7.0 | 266 | Zhao06 |
 
-Hypocenters and magnitudes are listed in `earthquake_index.csv`. Station
-KMMH07 is included in the 2026 Kumamoto dataset.
+Hypocenters and magnitudes are listed in `earthquake_index.csv`.
 
 ## Files
 
