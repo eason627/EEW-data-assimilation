@@ -1,6 +1,7 @@
 # Ground-Motion Assimilation Enables Adaptive Shaking Prediction for Earthquake Early Warning
 
 Yi-Sheng Huang and Hsin-Hua Huang
+
 Institute of Earth Sciences, Academia Sinica, Taipei, Taiwan
  
 
