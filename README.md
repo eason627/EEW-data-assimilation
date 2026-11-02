@@ -121,20 +121,7 @@ in m/s.
 The processed PGA tables in `RuptureParaTime_new/` are derived from these
 datasets. Users of the original waveform or site data should obtain them from
 the providers and follow their terms of use.
-
-## Citation
-
-If you use this code, please cite:
-
-> Huang, Y.-S. & Huang, H.-H. (2026). Ground-Motion Assimilation Enables
-> Adaptive Shaking Prediction for Earthquake Early Warning. *Nature
-> Communications*. https://doi.org/10.xxxx/xxxxx
-
-## License
-
-The code is released under the MIT License; see `LICENSE`. The license does not
-cover the third-party data listed under Data sources.
-
+ 
 ## Change log
 
 - 2026-10-30: Focal mechanisms in the final-PGA map are now keyed by the event
