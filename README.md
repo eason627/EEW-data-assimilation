@@ -122,12 +122,3 @@ The processed PGA tables in `RuptureParaTime_new/` are derived from these
 datasets. Users of the original waveform or site data should obtain them from
 the providers and follow their terms of use.
  
-## Change log
-
-- 2026-10-30: Focal mechanisms in the final-PGA map are now keyed by the event
-  IDs above (event 2 previously failed and event 3 showed another event's
-  mechanism; map only, no numerical change). Added the initial point-source
-  μ/σ print, the point- and line-source benchmark notebook and the license;
-  translated the remaining non-English comments in `vdist.py`.
-- 2026-10-30: The 2022 Chihshang KF now starts at 11 s, the time of the first
-  CWA alert (previously 10 s).
