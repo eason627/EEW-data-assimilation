@@ -2,8 +2,7 @@
 
 Yi-Sheng Huang and Hsin-Hua Huang
 Institute of Earth Sciences, Academia Sinica, Taipei, Taiwan
-
-Paper DOI: `10.xxxx/xxxxx` (to be added on publication)
+ 
 
 This repository contains the code and processed inputs used in the paper. A
 Kalman filter (KF) updates the coefficients of a ground-motion model in real
