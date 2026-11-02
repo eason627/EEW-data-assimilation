@@ -1,0 +1,42 @@
+{
+  "start_second": 13,
+  "end_second": 45,
+  "scientific_interval_seconds": 1,
+  "frame_count": 33,
+  "stations": 439,
+  "stored_notebook_deltas": {
+    "mu": 0.0,
+    "sigma": 0.0,
+    "me": 0.0,
+    "azimuth": 0.0
+  },
+  "original_plotting_source": "seismic_data_preprocess/03_Run_KalmanFilter.ipynb (research working tree, 2026-10-30)",
+  "original_plotting_notebook_sha256": "3aff4a1f8e68dc44514474f935026c1d5e72c5e308ef7903a3e581758163b2cf",
+  "sources_sha256": {
+    "seismic_data_preprocess/Run_KalmanFilter.ipynb": "00129a532e3a1ff361d05adce8408317ab898712498710dac6ce9560ca850f35",
+    "visualization/figure2_plotting_reference.json": "b9416ff88088a261f3a157300399902164b5ac9abaf08d2bc83216e5ed7ba0d3",
+    "earthquake_index.csv": "963977f9ffbbfd52853cf574b6dd8db9a78782406866dd0561ec6fedb3d6c837",
+    "RuptureParaTime_new/202404022358_RuptureParaTimeByStation_new.csv": "d660eac8f2568e5b390f56f3a173e4aa1f416aef9ffef089dd87c4798a569d37",
+    "GMPE code/GMPE_Chao19.py": "5a794b40a873c1a228e4e5ca98df4885d2ac276115e4139a1bf28c751a458315",
+    "GMPE code/GMPE_Chao20_model_coefficients.csv": "c24352452be8e96b580f43e953e241d004e746fa43bcfe8abb17f664da9022d3",
+    "vdist.py": "f36b2b521db13297d73a10c97fb9f03f147b3cc748230bce4609fc6223cacbcf",
+    "PGA_colorbar.cpt": "61cbda91c8d847523f987bee611944677c80cc38597f6c0ab7a798c8ea5213e0",
+    "intensity_colorbar.cpt": "b76e6d1a9746cb0fc7731517995b19e978fdf53f63a799bf70292840d03ec92c",
+    "TW_city_boundary.txt": "8349b88e13769fe5caf56011f3aa6d8d9e65d631e3487ebdc2b4906c7599e9b0"
+  },
+  "mp4_bytes": 1571263,
+  "gif_bytes": 1809879,
+  "mp4_decoded_frames": 33,
+  "gif_decoded_frames": 33,
+  "codec": "h264",
+  "mp4_resolution": [
+    2100,
+    1086
+  ],
+  "gif_resolution": [
+    1500,
+    776
+  ],
+  "fps": 1.5,
+  "playback_seconds": 22.0
+}

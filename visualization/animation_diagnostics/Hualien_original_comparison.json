@@ -1,0 +1,6 @@
+{
+  "frame_count": 33,
+  "source": "research 03_Run_KalmanFilter.ipynb, cells 4,5,13,14",
+  "max_abs_log_pga_difference": 3.552713678800501e-15,
+  "max_abs_azimuth_difference": 9.237055564881302e-14
+}

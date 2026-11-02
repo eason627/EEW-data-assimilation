@@ -100,6 +100,60 @@ Open `seismic_data_preprocess/Run_PointLine_Benchmark.ipynb` and set
   observed PGA for each method. An optional last cell prints the summary for all
   three events.
 
+
+## Figure 2 animation
+
+![Figure 2 Hualien playback](animations/Hualien_playback.gif)
+
+[Download the H.264 MP4](animations/Hualien_playback.mp4)
+(2100 × 1086; the GIF preview is 1500 × 776).
+
+The playback covers **13–45 s after origin time**, inclusive: **33 frames**,
+one actual KF update per scientific second. The first frame is determined from
+the successful updates of the existing KF notebook; 5–12 s fail its minimum
+station criterion. At the default 1.5 frames/s, the playback lasts about 22 s.
+All 33 scientific seconds are retained in both formats.
+
+After installing the environment above, run from the repository root:
+
+```bash
+python -m pip install imageio-ffmpeg==0.7.0
+python visualization/make_figure2_animation.py
+```
+
+The script uses NumPy, pandas, Matplotlib, Pillow, PyGMT/GMT (including coastline
+data and Ghostscript), and the existing Chao20 implementation. These are in
+`environment.yml`; `imageio-ffmpeg` supplies an FFmpeg binary with H.264 support.
+To change the playback speed without changing the scientific sampling, use
+`--fps 1`, `--fps 1.5`, `--fps 2`, `--fps 5` or `--fps 10`. Outputs can be redirected with
+`--output-dir PATH`.
+
+The script executes the numerical statements in
+`seismic_data_preprocess/Run_KalmanFilter.ipynb`, with its history endpoint
+extended to 45 s in memory. It does not modify the notebook, inputs or saved
+scientific results. Its `figure2_plotting_reference.json` companion preserves
+the plotting cells from the research notebook
+`seismic_data_preprocess/03_Run_KalmanFilter.ipynb` used for Figure 2, including
+the 2e/2f styling and reported-magnitude GMPE benchmarks. See
+[provenance](visualization/Figure2_animation_provenance.md).
+
+The gray residual points are **initial GMPE prediction minus final observed
+PGA**, as in the original Figure 2 plotting function; blue points are current
+KF prediction minus the same final observation. They are log residuals.
+μ is the median, σ is the population standard deviation, and
+ME = √(μ² + σ²). Red PGA points use the existing arrived-station selection.
+The arrow and direction labels use the existing coefficient-derived azimuth.
+The source has no separate direction-confidence mask; no new reliability
+threshold, interpolation or missing-value replacement is added. The complete
+time curves provide context; red cursors and dots mark the current update.
+
+The animations directory contains only GIF and MP4 files. Preview stills and
+validation data are stored in `visualization/animation_diagnostics/`.
+Each run also writes per-frame metrics, source SHA-256 hashes, validation
+results and five still frames (13, 14, 25, 35 and 45 s). It checks against the
+stored 35 s notebook result, decodes every MP4/GIF frame, and verifies the
+codec, resolution, frame count and GIF timing.
+
 ## Input data format
 
 Each file in `RuptureParaTime_new/` has the columns: time index (seconds after
