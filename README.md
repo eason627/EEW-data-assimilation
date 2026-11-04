@@ -6,7 +6,7 @@ Institute of Earth Sciences, Academia Sinica, Taipei, Taiwan
  
 
 This repository contains the code and processed inputs used in the paper. A
-Kalman filter (KF) updates the coefficients of a ground-motion model in real
+Kalman filter (KF) updates the coefficients of an anisotropic ground motion prediction equation (GMPE) in real
 time as peak ground acceleration (PGA) observations arrive, and predicts PGA at
 all stations after each update.
 
